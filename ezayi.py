@@ -6,7 +6,7 @@
 #var vibration et message
 import os,sys,time,androidhelper
 dro=androidhelper.Android()
-import sendmail
+#import sendmail
 #message delivrer a screen
 #err=dro.makeToast("SUCCESS")
 #
