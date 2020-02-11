@@ -1,11 +1,19 @@
 #coding:utf8
 
 print("Hello World")
+##fichier  créé 
 filecreated=open ('h.txt',mode='a')
 filenewline=filecreated.write ("Bonjour les gars")
+filecreated.close ()
+## texte ajouté
 fileopen=open ('h.txt',mode='r')
 filereadlines=fileopen.readlines()
-if(filereadlines[1].find("cookie")==True):
-    print ("Un cookie Est présent")
+subs='cookie'
+###
+
+re=[i for i in filereadlines if subs in i ]
+if (re==[]):
+    print ("Aucun résultat trouvé")
 else :
-    print ("Pas de cookie présent")
+    print ("résultat trouvé ::> ",re)
+fileopen.close()
